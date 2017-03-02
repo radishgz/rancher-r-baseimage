@@ -5,5 +5,4 @@ RUN go get github.com/golang/lint/golint github.com/fzipp/gocyclo github.com/cli
 RUN go clean -i net && go install -tags netgo std
 RUN go install -race -tags netgo std
 COPY build.sh /
-ENTRYPOINT ["sh", "/build.sh"]
-ENV T T
+ENTRYPOINT ["sh"]
